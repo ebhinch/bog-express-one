@@ -2,7 +2,8 @@
   "name": "bog-express-one",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",  "engines": {
+  "main": "server.js",  
+  "engines": {
     "node": "8.9.0"
   },
   "scripts": {
