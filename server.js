@@ -6,6 +6,8 @@ const app = express();
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true}); 
 
+const CreaturesController = require("./routes/CreaturesController")
+
 const connection = mongoose.connection;
 connection.on('connected', () => {
 console.log('Mongoose Connected Successfully');
@@ -19,6 +21,9 @@ console.log('Mongoose default connection error: ' + err);
 
 app.use(bodyParser.json());
 app.use(express.static(`${__dirname}/client/build`))
+
+app.use("/api/creatures", CreaturesController)
+
 
 
 app.get('/', (req, res) => {
