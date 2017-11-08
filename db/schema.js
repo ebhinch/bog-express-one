@@ -11,4 +11,6 @@ const Creature = mongoose.model('Creature', creatureSchema)
 
 module.exports = {
   Creature
-}\
+}
+
+
